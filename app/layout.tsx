@@ -15,17 +15,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nova-select-life.sound-charm-7867.chatgpt.site"),
-  title: "NOVA 诺瓦生活｜设计好物商城",
-  description: "发现服装、家居、数码与生活方式好物，把日常过成喜欢的样子。",
+  title: "NOVA Select | Design for Everyday Life",
+  description: "Discover independent style, homeware, tech and lifestyle pieces selected for better everyday living.",
   openGraph: {
-    title: "NOVA 诺瓦生活｜设计好物商城",
-    description: "把日常，过成喜欢的样子。发现值得长期相伴的设计好物。",
-    images: [{ url: "/og.png", width: 1733, height: 908, alt: "NOVA 诺瓦生活" }],
+    title: "NOVA Select | Design for Everyday Life",
+    description: "Make every day your own with design-led pieces selected for real life.",
+    images: [{ url: "/og.png", width: 1733, height: 908, alt: "NOVA Select" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NOVA 诺瓦生活｜设计好物商城",
-    description: "把日常，过成喜欢的样子。发现值得长期相伴的设计好物。",
+    title: "NOVA Select | Design for Everyday Life",
+    description: "Make every day your own with design-led pieces selected for real life.",
     images: ["/og.png"],
   },
 };
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <GoogleAnalytics gaId="G-RGDGHXDW4L" />
