@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/next"
-
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,18 +16,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nova-select-life.sound-charm-7867.chatgpt.site"),
+  metadataBase: new URL(
+    "https://nova-select-life.sound-charm-7867.chatgpt.site",
+  ),
   title: "NOVA Select | Design for Everyday Life",
-  description: "Discover independent style, homeware, tech and lifestyle pieces selected for better everyday living.",
+  description:
+    "Discover independent style, homeware, tech and lifestyle pieces selected for better everyday living.",
   openGraph: {
     title: "NOVA Select | Design for Everyday Life",
-    description: "Make every day your own with design-led pieces selected for real life.",
+    description:
+      "Make every day your own with design-led pieces selected for real life.",
     images: [{ url: "/og.png", width: 1733, height: 908, alt: "NOVA Select" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "NOVA Select | Design for Everyday Life",
-    description: "Make every day your own with design-led pieces selected for real life.",
+    description:
+      "Make every day your own with design-led pieces selected for real life.",
     images: ["/og.png"],
   },
 };
@@ -40,7 +45,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <GoogleAnalytics gaId="G-RGDGHXDW4L" />
       <Analytics />
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
